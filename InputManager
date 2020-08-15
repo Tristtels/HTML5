@@ -30,5 +30,22 @@ public class InputManager : MonoBehaviour
                 Debug.Log("no left or right");
             }
         }
+        float yinput = Input.GetAxis("Vertical");
+        Debug.Log(yinput);
+        if (yinput > 0)
+        {
+            Debug.Log("up");
+        }
+        else
+        {
+            if (yinput < 0)
+            {
+                Debug.Log("down");
+            }
+            else
+            {
+                Debug.Log("no up or down");
+            }
+        }
     }
 }
