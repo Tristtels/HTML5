@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>幽灵</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #00034b;
+
+        }
+        .container .ghost{
+            position: relative;
+            width: 150px;
+            height: 225px;
+            border-radius: 75px 75px 0 0;
+            background-color: #fff;
+            box-shadow: -17px 0 0 #dbdbdb inset,0 0 50px #5939db;
+
+            animation: ghost 2s infinite;
+
+
+        }
+        .container .ghost .ghostEyes{
+            display: flex;
+            justify-content: space-around;
+            width: 90px;
+            padding-top: 70px;
+            margin: 0 auto;
+                    }
+        .container .ghost .ghostEyes::before,
+        .container .ghost .ghostEyes::after{
+            content: "";
+            width: 15px;
+            height: 25px;
+            border-radius: 50%;
+            background-color: #00034b;
+        }
+
+        .container .ghost .ghostDimples{
+            display: flex;
+            justify-content: space-around;
+            width: 130px;
+            padding-top:15px;
+            margin: 0 auto;
+        }
+        .container .ghost .ghostDimples::before,
+        .container .ghost .ghostDimples::after{
+            content: "";
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: #ffbeff;
+        }
+
+        .container .ghost .ghostFeet{
+
+            display: flex;
+            position: absolute;
+            bottom: -13px;
+            width: 100%;
+
+        }
+        .container .ghost .ghostFeet .ghostFoot{
+            width: 25%;
+            height: 26px;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .container .ghost .ghostFeet .ghostFoot:last-child{
+            background-image: linear-gradient(to right,#fff 55%,#dbdbdb 45%);
+
+        }
+
+        .container .shadow {
+            width: 150px;
+            height: 40px;
+            margin-top: 50px;
+            border-radius: 50%;
+            background-color: #000232;
+            animation: shadow 2s infinite;
+        }
+
+        @keyframes ghost {
+            0%,100%{
+                transform: translateY(0);
+            }
+            50%{
+                transform: translateY(-15px);
+            }
+        }
+        @keyframes shadow{
+            0%,100%{
+                transform: scale(1);
+            }
+            50%{
+                transform: scale(0.9);
+            }
+        }
+        h1 {
+            text-decoration: line-through;
+            text-indent: 100px;
+            text-shadow: 2px 2px 5px rgb(179, 255, 0);
+        }
+        h2 {
+            text-decoration: underline;
+            text-indent: 50px;
+            text-shadow: 2px 2px 5px rgb(179, 255, 0);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="ghost">
+            <div class="ghostEyes"></div>
+            <ghostDimples></ghostDimples>
+            <div class="ghostFeet">
+                <div class="ghostFoot"></div>
+                <div class="ghostFoot"></div>
+                <div class="ghostFoot"></div>
+                <div class="ghostFoot"></div>
+            </div>
+        </div>
+        <div class="shadow"></div>
+        
+    </div>
+    <h1 style="color:orange;">This is a Cutie</h1>
+    <h2 style="color:rgb(30, 255, 0);">This is a Ghost</h2>
+</body>
+</html>
